@@ -1,12 +1,18 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace TodoList.Domain
 {
     public class TodoList : DomainBase
     {
 
-        public string Description { get; set; }
-        public IEnumerable<Todo> Todos { get; set; }
+        public string Description { get; private set; }
+        public ICollection<Todo> Todos { get; private set; }
 
+        public TodoList(string description)
+        {            
+            Description = description;
+            Todos = new List<Todo>();
+        }
     }
 }

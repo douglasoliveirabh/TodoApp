@@ -8,7 +8,7 @@ namespace TodoList.Persistence.Configuration
     {
         public void Configure(EntityTypeBuilder<Domain.TodoList> builder)
         {
-            builder.ToTable("Todos");
+            builder.ToTable("TodoLists");
 
             builder.HasKey(t => t.Id);
 

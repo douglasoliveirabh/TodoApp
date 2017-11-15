@@ -4,6 +4,6 @@ namespace TodoList.Domain
 {
     public class DomainBase
     {
-        public Guid Id { get; set; }
+        public int Id { get; protected set; }
     }
 }
